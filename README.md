@@ -29,7 +29,7 @@ Enable the `layer` until the `layer` is disabled.
 ```
 &kt key
 ```
-toggle the `key`. 
+toggle the `key` hold or released. 
 
 #### [Sticky Key Behavior](https://zmk.dev/docs/behaviors/sticky-key)
 ```
@@ -43,7 +43,7 @@ Stick the `key` till next key pressed.
 ```
 Stick the `layer` till next key pressed.
 
-#### Transparent](https://zmk.dev/docs/behaviors/misc#transparent)
+#### [Transparent](https://zmk.dev/docs/behaviors/misc#transparent)
 ```
 &trans
 ```
@@ -68,7 +68,6 @@ Capitalize till stop key pressed. stop key is not alphabet and `continue-list`.
 Repeats the last key.
 
 ## [Conditional Layers](https://zmk.dev/docs/features/conditional-layers)
-Example.
 ```
     conditional_layers {
         compatible = "zmk,conditional-layers";
