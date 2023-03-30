@@ -1,4 +1,24 @@
-# ZMK Behaviors Cheat Sheet
+# ZMK Cheat Sheet
+## Key Codes
+### [All Codes](https://zmk.dev/docs/codes)
+Each key's codes are above page.
+
+### [Modifiers Functions](https://zmk.dev/docs/codes/modifiers)
+
+`xx(code)` adds modifier key to the `code`.
+They can be comined. `&kp LC(RA(B))` = <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>b</kbd>.
+
+Modifier functions
+
+- `LS(code)` : Left Shift
+- `RS(code)` : Right Shift
+- `LC(code)` : Left Control
+- `RC(code)` : Right Control
+- `LA(code)` : Left Alt
+- `RA(code)` : Right Alt
+- `LG(code)` : Left GUI (Windows / Command / Meta)
+- `RG(code)` : Right GUI (Windows / Command / Meta)
+
 ## Behaviors
 
 #### [Key Press Behaviors](https://zmk.dev/docs/behaviors/key-press)
@@ -29,7 +49,7 @@ Enable the `layer` until the `layer` is disabled.
 ```
 &kt key
 ```
-toggle the `key` hold or released. 
+toggle the `key` hold or released.
 
 #### [Sticky Key Behavior](https://zmk.dev/docs/behaviors/sticky-key)
 ```
@@ -42,6 +62,8 @@ Stick the `key` till next key pressed.
 &sl layer
 ```
 Stick the `layer` till next key pressed.
+
+The devicetree document is [here](https://zmk.dev/docs/config/behaviors#sticky-key).
 
 #### [Transparent](https://zmk.dev/docs/behaviors/misc#transparent)
 ```
@@ -61,11 +83,15 @@ No behavior.
 ```
 Capitalize till stop key pressed. stop key is not alphabet and `continue-list`.
 
+The devicetree document is [here](https://zmk.dev/docs/config/behaviors#caps-word).
+
 #### [Key Repeat Behavior](https://zmk.dev/docs/behaviors/key-repeat)
 ```
 &key_repeat
 ```
 Repeats the last key.
+
+The devicetree document is [here](https://zmk.dev/docs/config/behaviors#key-repeat).
 
 ## [Conditional Layers](https://zmk.dev/docs/features/conditional-layers)
 ```
@@ -103,6 +129,8 @@ released within `tapping-term-ms`, sends tap key. hold after the time, sends (ho
 `flavor` in (`hold-preferred`, `balanced`, `tap-preferred`, `tap-unless-interrupted`)
 `<hold>`, `<tap>` is behavior like `<&kp>`, `<&mo>`.
 ![](https://zmk.dev/assets/images/comparison-90bcec61f679e88a74490eb261d92940.svg)
+
+The devicetree document is [here](https://zmk.dev/docs/config/behaviors#hold-tap).
 
 #### [Mod-Tap Behavior](https://zmk.dev/docs/behaviors/mod-tap)
 ```
@@ -171,6 +199,8 @@ Available mods: `MOD_LSFT`, `MOD_RSFT`, `MOD_LCTL`, `MOD_RCTL`, `MOD_LALT`, `MOD
 
 keep-mods' `MOD_*` will be keep holding with behavior.
 
+The devicetree document is [here](https://zmk.dev/docs/config/behaviors#mod-morph).
+
 #### [Tap-Dance Behavior](https://zmk.dev/docs/behaviors/tap-dance)
 ```
     behaviors {
@@ -184,6 +214,8 @@ keep-mods' `MOD_*` will be keep holding with behavior.
     };
 ```
 Change behavior by the count of tap.
+
+The devicetree document is [here](https://zmk.dev/docs/config/behaviors#tap-dance).
 
 ## [Macro Behavior](https://zmk.dev/docs/behaviors/macros)
 ```
@@ -201,6 +233,8 @@ Change behavior by the count of tap.
     };
 ```
 WIP.
+
+The devicetree document is [here](https://zmk.dev/docs/config/behaviors#macro).
 
 ## Hardware or firmware related
 
