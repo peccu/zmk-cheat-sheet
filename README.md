@@ -285,4 +285,4 @@ WIP
 ```
 WIP
 
-{% include_relative test.html %}
+{% include_relative footer.html %}
