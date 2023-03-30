@@ -284,3 +284,5 @@ WIP
 &ext_power EP_*
 ```
 WIP
+
+{% include_relative test.html %}
