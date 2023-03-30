@@ -21,43 +21,43 @@ Modifier functions
 
 ## Behaviors
 
-#### [Key Press Behaviors](https://zmk.dev/docs/behaviors/key-press)
+### [Key Press Behaviors](https://zmk.dev/docs/behaviors/key-press)
 ```
 &kp key
 ```
 press the `key`.
 
-#### [Momentary layer](https://zmk.dev/docs/behaviors/layers#momentary-layer)
+### [Momentary layer](https://zmk.dev/docs/behaviors/layers#momentary-layer)
 ```
 &mo layer
 ```
 momentary activate specified `layer`.
 
-#### [To Layer](https://zmk.dev/docs/behaviors/layers#to-layer)
+### [To Layer](https://zmk.dev/docs/behaviors/layers#to-layer)
 ```
 &to layer
 ```
 Enable the `layer` and the default layer, and disable all other layers. (maybe it for &trans behavior).
 
-#### [Toggle Layer](https://zmk.dev/docs/behaviors/layers#toggle-layer)
+### [Toggle Layer](https://zmk.dev/docs/behaviors/layers#toggle-layer)
 ```
 &tog layer
 ```
 Enable the `layer` until the `layer` is disabled.
 
-#### [Key Toggle Behavior](https://zmk.dev/docs/behaviors/key-toggle)
+### [Key Toggle Behavior](https://zmk.dev/docs/behaviors/key-toggle)
 ```
 &kt key
 ```
 toggle the `key` hold or released.
 
-#### [Sticky Key Behavior](https://zmk.dev/docs/behaviors/sticky-key)
+### [Sticky Key Behavior](https://zmk.dev/docs/behaviors/sticky-key)
 ```
 &sk key
 ```
 Stick the `key` till next key pressed.
 
-#### [Sticky Layer Behavior](https://zmk.dev/docs/behaviors/sticky-layer)
+### [Sticky Layer Behavior](https://zmk.dev/docs/behaviors/sticky-layer)
 ```
 &sl layer
 ```
@@ -65,19 +65,19 @@ Stick the `layer` till next key pressed.
 
 The devicetree document is [here](https://zmk.dev/docs/config/behaviors#sticky-key).
 
-#### [Transparent](https://zmk.dev/docs/behaviors/misc#transparent)
+### [Transparent](https://zmk.dev/docs/behaviors/misc#transparent)
 ```
 &trans
 ```
 Pass down to the next active layer in the stack.
 
-#### [None](https://zmk.dev/docs/behaviors/misc#none)
+### [None](https://zmk.dev/docs/behaviors/misc#none)
 ```
 &none
 ```
 No behavior.
 
-#### [Caps Word Behavior](https://zmk.dev/docs/behaviors/caps-word)
+### [Caps Word Behavior](https://zmk.dev/docs/behaviors/caps-word)
 ```
 &caps_word
 ```
@@ -85,7 +85,7 @@ Capitalize till stop key pressed. stop key is not alphabet and `continue-list`.
 
 The devicetree document is [here](https://zmk.dev/docs/config/behaviors#caps-word).
 
-#### [Key Repeat Behavior](https://zmk.dev/docs/behaviors/key-repeat)
+### [Key Repeat Behavior](https://zmk.dev/docs/behaviors/key-repeat)
 ```
 &key_repeat
 ```
@@ -107,7 +107,7 @@ If some multiple layers are enabled (in above example, `1` and `2`), the then-la
 
 ## Hold-Tap related
 
-#### [Hold-Tap Behavior](https://zmk.dev/docs/behaviors/hold-tap)
+### [Hold-Tap Behavior](https://zmk.dev/docs/behaviors/hold-tap)
 Advanced Mod-Tap and Layer-Tap.
 
 ![](https://zmk.dev/assets/images/case1_2-0c88b39aeb0de9b5f5651c8274fa83f3.svg)
@@ -132,7 +132,7 @@ released within `tapping-term-ms`, sends tap key. hold after the time, sends (ho
 
 The devicetree document is [here](https://zmk.dev/docs/config/behaviors#hold-tap).
 
-#### [Mod-Tap Behavior](https://zmk.dev/docs/behaviors/mod-tap)
+### [Mod-Tap Behavior](https://zmk.dev/docs/behaviors/mod-tap)
 ```
 &mt modkey tapkey
 ```
@@ -155,7 +155,7 @@ This behavior equals the Hold-tap "hold-preferred" with (`hold` = key press(`&kp
     // &mt modkey tapkey = &mt_impl modkey tapkey
 ```
 
-#### [Layer-tap](https://zmk.dev/docs/behaviors/layers#layer-tap)
+### [Layer-tap](https://zmk.dev/docs/behaviors/layers#layer-tap)
 ```
 &lt layer key
 ```
@@ -180,7 +180,7 @@ This behavior equals the Hold-tap "tap-preferred" with (`hold` = momentary layer
 
 ## Other definitions
 
-#### [Mod-Morph Behavior](https://zmk.dev/docs/behaviors/mod-morph)
+### [Mod-Morph Behavior](https://zmk.dev/docs/behaviors/mod-morph)
 ```
     behaviors {
         key: name {
@@ -201,7 +201,7 @@ keep-mods' `MOD_*` will be keep holding with behavior.
 
 The devicetree document is [here](https://zmk.dev/docs/config/behaviors#mod-morph).
 
-#### [Tap-Dance Behavior](https://zmk.dev/docs/behaviors/tap-dance)
+### [Tap-Dance Behavior](https://zmk.dev/docs/behaviors/tap-dance)
 ```
     behaviors {
         td0: tap_dance_0 {
@@ -238,19 +238,19 @@ The devicetree document is [here](https://zmk.dev/docs/config/behaviors#macro).
 
 ## Hardware or firmware related
 
-#### [Reset Behaviors](https://zmk.dev/docs/behaviors/reset)
+### [Reset Behaviors](https://zmk.dev/docs/behaviors/reset)
 ```
 &reset
 ```
 Reset with current flashed firmware. (like restart)
 
-#### [Bootloader Reset](https://zmk.dev/docs/behaviors/reset#bootloader-reset)
+### [Bootloader Reset](https://zmk.dev/docs/behaviors/reset#bootloader-reset)
 ```
 &bootloader
 ```
 Reset to flash new firmware.
 
-#### [Bluetooth Behavior](https://zmk.dev/docs/behaviors/bluetooth)
+### [Bluetooth Behavior](https://zmk.dev/docs/behaviors/bluetooth)
 ```
 &bt BT_*
 ```
@@ -259,7 +259,7 @@ Reset to flash new firmware.
 - BT_PRV : switch to the previous profile
 - BT_SEL number : switch to the 0-index number profile
 
-#### [Output Selection Behavior](https://zmk.dev/docs/behaviors/outputs)
+### [Output Selection Behavior](https://zmk.dev/docs/behaviors/outputs)
 ```
 &out OUT_*
 ```
@@ -267,19 +267,19 @@ Reset to flash new firmware.
 - OUT_BLE : prefer use bluetooth low energy 
 - OUT_TOG : toggle above
 
-#### [RGB Underglow Behavior](https://zmk.dev/docs/behaviors/underglow)
+### [RGB Underglow Behavior](https://zmk.dev/docs/behaviors/underglow)
 ```
 &rgb_ug RGB_*
 ```
 WIP
 
-#### [Backlight Behavior](https://zmk.dev/docs/behaviors/backlight)
+### [Backlight Behavior](https://zmk.dev/docs/behaviors/backlight)
 ```
 &bl BL_*
 ```
 WIP
 
-#### [Power Management Behaviors](https://zmk.dev/docs/behaviors/power)
+### [Power Management Behaviors](https://zmk.dev/docs/behaviors/power)
 ```
 &ext_power EP_*
 ```
